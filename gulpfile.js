@@ -1,45 +1,45 @@
 'use strict';
 
-const gulp = require('gulp'),
-      notify = require('gulp-notify'),
-      reporter = require('postcss-browser-reporter'),
-      eslint = require('gulp-eslint'),
-      stylelint = require('stylelint'),
-      browserSync = require('browser-sync').create(),
-      postcss = require('gulp-postcss'),
-      nested = require('postcss-nested'),
-      assets = require('postcss-assets'),
-      short = require('postcss-short'),
-      autoprefixer = require('gulp-autoprefixer'),
-      rimraf = require('rimraf'),
-      csso = require('gulp-csso'),
-      pug = require('gulp-pug'),
-      replace = require('gulp-replace'),
-      svgmin = require('gulp-svgmin'),
-      cheerio = require('gulp-cheerio'),
-      svgSprite = require('gulp-svg-sprite'),
+let gulp = require('gulp'),
+    notify = require('gulp-notify'),
+    reporter = require('postcss-browser-reporter'),
+    eslint = require('gulp-eslint'),
+    stylelint = require('stylelint'),
+    browserSync = require('browser-sync').create(),
+    postcss = require('gulp-postcss'),
+    nested = require('postcss-nested'),
+    assets = require('postcss-assets'),
+    short = require('postcss-short'),
+    autoprefixer = require('gulp-autoprefixer'),
+    rimraf = require('rimraf'),
+    csso = require('gulp-csso'),
+    pug = require('gulp-pug'),
+    replace = require('gulp-replace'),
+    svgmin = require('gulp-svgmin'),
+    cheerio = require('gulp-cheerio'),
+    svgSprite = require('gulp-svg-sprite');
 
 
 
-gulp.task('styles', function() {
+    gulp.task('styles', function() {
 
-    var processors = [
+        var processors = [
 
-        stylelint(),
-        nested,
-        short,
-        assets,
-        reporter({
-            selector: 'body:before'
-        })
-    ];
+            stylelint(),
+            nested,
+            short,
+            assets,
+            reporter({
+                selector: 'body:before'
+            })
+        ];
 
-    return gulp.src('./source/css/main.css')
-        .pipe(postcss(processors)).on('error', notify.onError({ title: 'Style' }))
-        .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
-        .pipe(gulp.dest('./build/assets/css/'))
-        .pipe(browserSync.stream());
-});
+        return gulp.src('./source/css/main.css')
+            .pipe(postcss(processors)).on('error', notify.onError({ title: 'Style' }))
+            .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
+            .pipe(gulp.dest('./build/assets/css/'))
+            .pipe(browserSync.stream());
+    });
 
 gulp.task('normalize', () => {
     return gulp.src('./source/css/normalize.css')

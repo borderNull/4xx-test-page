@@ -33,15 +33,17 @@ document.addEventListener('click', function(e) {
                 shareBtn.style.display = 'block';
                 offerSection.style.display = 'block';
                 addBtn.style.width = '140px';
+                pageWrap.style.height = '';
             }
 
             if (e.target == pageNote[v]) {
                 offerSection.style.display = 'none';
                 shareBtn.style.display = 'none';
                 addBtn.style.width = '100%';
-
+                pageWrap.style.minHeight = '70vh';
                 if (child !== e.target) {
                     child.style.display = 'none';
+
                 }
             }
         });
