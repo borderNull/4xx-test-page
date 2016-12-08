@@ -28,7 +28,7 @@ html
   body
     .sprite__block
         include ../../build/assets/sprite/sprite.svg
-    .modal__block
+    .modal
      .modal__content   
       .modal__title
         p.modal__title__text Share
@@ -53,155 +53,155 @@ html
        button.download__btn Download
        svg.offer__close
         use(xlink:href='#close')     
-    header.header__section
-        .header__logo
-        .header__signup
-            a.header__link(href='#')
-            span.header__title  — start publishing in minutes
+    header.header
+        .header-logo
+        .header-signup
+            a.header-signup__link(href='#')
+            span.header-signup__title  — start publishing in minutes
         a.header__login(href='#') log in
-    .page__wrap
-     .page__container
-       section.info__section
-        .info__block
-         .info__user   
-           img.info__user__img(src="./assets/images/ava@2x.png")
-           p.info__username Konstantin Vladimirskiy
-         .info__socials
-          .info__socials__set
+    .page-wrap
+     .page-container
+       section.info-section
+        .info-block
+         .info-user   
+           img.info-user__img(src="./assets/images/ava@2x.png")
+           p.info-user__username Konstantin Vladimirskiy
+         .info-socials
+          .socials-set
             each link,name in socials
-             a.info__social__link(href=link, target="_blank")
-              svg.info__social__svg(class=name)
+             a.socials-set__link(href=link, target="_blank")
+              svg.socials-set__svg(class=name)
                use(xlink:href='#'+name)
-          p.info__share http://cll.io/a6lnu       
-        .info__data
-          p.info__date Post-release checklist 2015.02.26
-          button.info__btn Add to my Centrallo
-          button.info__btn.btn__share Share
-           svg.share__svg
+          p.info-socials__share http://cll.io/a6lnu       
+        .info-data
+          p.info-data__date Post-release checklist 2015.02.26
+          button.info-data__btn Add to my Centrallo
+          button.info-data__btn.btn__share Share
+           svg.info-data__svg
             use(xlink:href='#share')     
-     .page__container      
-       section.page__note.checklist
-        .note__bookmark
+     .page-container      
+       section.page-note.checklist
+        .bookmark
           svg.bookmark__corner.corner__red
             use(xlink:href='#corner-red')
           img.bookmark__icon(src='./assets/images/star.svg')
-        ul.checkbox__list
+        ul.checkbox-list
          each val,id in checkboxes
-          li.checkbox__item   
-           input.checkbox__input(type='checkbox',id=id)
-           label.checkbox__label(for=id)=val
-        .note__timestamp
+          li.checkbox-item   
+           input.checkbox-item__input(type='checkbox',id=id)
+           label.checkbox-item__label(for=id)=val
+        .timestamp
          p.timestamp__text 2h ago
-         .timestamp__links
+         .timestamp-links
           each val in share
            if (val=='share')
-            svg.timestamp__svg(class=val)
+            svg.timestamp-links__svg(class=val)
              use(xlink:href='#'+val)
            if (val=='link')
-            .timestamp__tooltip__block
-             svg.timestamp__svg(class=val) 
+            .tooltip
+             svg.timestamp-links__svg(class=val) 
               use(xlink:href='#'+val)
-             .tooltip__wrap   
-              span.tooltip  http://cll.io/a6lnu    
-       section.page__note
+             .tooltip-wrap   
+              span.tooltip-wrap__text  http://cll.io/a6lnu    
+       section.page-note
         each note,name in notes
-         .note__block
-          .note__title
-            svg.note__svg
+         .note-block
+          .note-title
+            svg.note-title__svg
              use(xlink:href='#list')   
-            p.note__title__text=name
-          .note__details
+            p.note-title__text=name
+          .note-details
            each val,key in note 
-            p.note__items=key
-            p.note__date=val     
-        .note__timestamp
+            p.note-details__items=key
+            p.note-details__date=val     
+        .timestamp
          p.timestamp__text 2h ago
-         .timestamp__links
+         .timestamp-links
           each val in share
            if (val=='share')
-            svg.timestamp__svg(class=val)
+            svg.timestamp-links__svg(class=val)
              use(xlink:href='#'+val)
            if (val=='link')
-            .timestamp__tooltip__block
-             svg.timestamp__svg(class=val) 
+            .tooltip
+             svg.timestamp-links__svg(class=val) 
               use(xlink:href='#'+val)
-             .tooltip__wrap   
-              span.tooltip  http://cll.io/a6lnu  
-       section.page__note.gallery
-        .gallery__set
+             .tooltip-wrap   
+              span.tooltip-wrap__text  http://cll.io/a6lnu  
+       section.page-note.gallery
+        .gallery-set
          each src,name in gallery
-          img.gallery__item(class=name,src=src)
-        .gallery__calendar
+          img.gallery-set__item(class=name,src=src)
+        .calendar
           svg.calendar__svg
            use(xlink:href='#calendar')
           p.calendar__text Due on Feb 13, 12:42 PM
-        .note__timestamp
+        .timestamp
          p.timestamp__text Feb 14
-         .timestamp__links
+         .timestamp-links
           each val in share
            if (val=='share')
-            svg.timestamp__svg(class=val)
+            svg.timestamp-links__svg(class=val)
              use(xlink:href='#'+val)
            if (val=='link')
-            .timestamp__tooltip__block
-             svg.timestamp__svg(class=val) 
+            .tooltip
+             svg.timestamp-links__svg(class=val) 
               use(xlink:href='#'+val)
-             .tooltip__wrap   
-              span.tooltip  http://cll.io/a6lnu   
-       section.page__note.description
+             .tooltip-wrap   
+              span.tooltip-wrap__text  http://cll.io/a6lnu   
+       section.page-note.description
          p.description__text The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film trilogy, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
          each src,name in images
           img.description__img(src=src,class=name)
-         .description__map
+         .map
            img.map__img(src='./assets/images/map@3x.png')
            .map__text
             p.map__place Merry Bergtraum High School for Business Cariers
             p.map__address 411 Pearl St, NY 10038
             p.map__address United States of America
             a.map__link(href="#") Watch location on Google Maps
-         .description__files
+         .files
            each name,src in files
-            .description__file
+            .file
               img.file__img(src=src)
               p.file__name=name   
-         .note__timestamp
+         .timestamp
           p.timestamp__text Jan 12
-          .timestamp__links
+          .timestamp-links
            each val in share
             if (val=='share')
-             svg.timestamp__svg(class=val)
+             svg.timestamp-links__svg(class=val)
               use(xlink:href='#'+val)
             if (val=='link')
-             .timestamp__tooltip__block
-              svg.timestamp__svg(class=val) 
+             .tooltip
+              svg.timestamp-links__svg(class=val) 
                use(xlink:href='#'+val)
-              .tooltip__wrap   
-               span.tooltip  http://cll.io/a6lnu       
-       section.empty__note.locked__note
-        .note__bookmark
+              .tooltip-wrap   
+               span.tooltip-wrap__text  http://cll.io/a6lnu       
+       section.empty-note.locked-note
+        .bookmark
             svg.bookmark__corner.corner__grey
              use(xlink:href='#corner-red')
             img.bookmark__icon.icon__lock(src='./assets/images/lock.svg')  
-        .note__timestamp
+        .timestamp
          p.timestamp__text Nov 22
          p.timestamp__info Protected
-       section.empty__note.archive__note
-        .note__bookmark
+       section.empty-note.archive-note
+        .bookmark
             svg.bookmark__corner.corner__grey
              use(xlink:href='#corner-red')
             img.bookmark__icon.icon__box(src='./assets/images/box.svg')
-        .note__timestamp
+        .timestamp
          p.timestamp__text Nov 21
          p.timestamp__info.archive Archived
-    footer.footer__section
+    footer.footer
         p.footer__copyright © CENTRALLO 2015
-        .footer__links
+        .footer-links
          each name in links
-          a.footer__link(href='#')=name 
-        .footer__socials
+          a.footer-links__link(href='#')=name 
+        .footer-socials
          each href,id in footer
-          a.footer__social__link(href=href, target="_blank")   
-           svg.footer__svg(class=id)
+          a.footer-socials__link(href=href, target="_blank")   
+           svg.footer-socials__svg(class=id)
             use(xlink:href='#'+id)   
 
 
