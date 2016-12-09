@@ -12,7 +12,7 @@ window.addEventListener('resize', function() {
 let shareBtn = document.querySelector('.btn__share');
 
 document.addEventListener('click', function(e) {
-    let shareIcon = document.querySelectorAll('.timestamp__svg.share');
+    let shareIcon = document.querySelectorAll('.timestamp-links__svg.share');
     // pageNote = document.querySelectorAll('.page__note'),
     // pageWrap = document.querySelector('.page__wrap');
 
@@ -54,7 +54,7 @@ document.addEventListener('click', function(e) {
 
 
 function checkWidth() {
-    let logoDesc = document.querySelector('.logo__description'),
+    let logoDesc = document.querySelector('.offer-logo-text__description'),
         screenWidth = window.innerWidth,
         signupLink = document.querySelector('.header-signup__link');
 
@@ -75,8 +75,8 @@ function checkWidth() {
 }
 
 function modalWindow() {
-    let modalBlock = document.querySelector('.modal__block'),
-        closeBtn = document.querySelector('.modal__close');
+    let modalBlock = document.querySelector('.modal'),
+        closeBtn = document.querySelector('.modal-title__close');
 
     modalBlock.style.display = 'block';
     closeBtn.addEventListener('click', function() {

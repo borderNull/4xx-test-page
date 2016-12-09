@@ -29,29 +29,29 @@ html
     .sprite__block
         include ../../build/assets/sprite/sprite.svg
     .modal
-     .modal__content   
-      .modal__title
-        p.modal__title__text Share
-        svg.modal__close
+     .modal-content   
+      .modal-title
+        p.modal-title__text Share
+        svg.modal-title__close
           use(xlink:href='#close')
-      .modal__links    
-       p.modal__text http://cll.io/a6lnu
-       .modal__socials__block
+      .modal-links    
+       p.modal-links__text http://cll.io/a6lnu
+       .modal-socials
         each link,id in socials
-         .modal__social__block(class=id)
-          a.modal__social__link(href=link, target="_blank")   
-           svg.modal__social__svg(class=id)
+         .modal-socials-block(class=id)
+          a.modal-socials-block__link(href=link, target="_blank")   
+           svg.modal-socials-block__svg(class=id)
             use(xlink:href='#'+id)       
-    .offer__wrap    
-     .offer__section
-      .offer__logo
-       img.logo__svg(src='./assets/images/icon.svg')
-       .logo__text
-        p.logo__name Centrallo
-        p.logo__description
-      .offer__download
-       button.download__btn Download
-       svg.offer__close
+    .offer-wrap    
+     .offer
+      .offer-logo
+       img.offer-logo__svg(src='./assets/images/icon.svg')
+       .offer-logo-text
+        p.offer-logo-text__name Centrallo
+        p.offer-logo-text__description
+      .offer-download
+       button.offer-download__btn Download
+       svg.offer-download__close
         use(xlink:href='#close')     
     header.header
         .header-logo

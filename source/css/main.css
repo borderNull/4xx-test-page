@@ -26,13 +26,13 @@ body {
     display: none;
 }
 
-.offer__wrap {
+.offer-wrap {
     background-color: #37b7ec;
     width: 100%;
     display: none;
 }
 
-.offer__section {
+.offer {
     width: 80%;
     height: 50px;
     margin: auto;
@@ -50,8 +50,8 @@ body {
     display: none;
 }
 
-.modal__content {
-    margin: 30% auto;
+.modal-content {
+    margin: 20% auto;
     width: 25%;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: .8s;
@@ -81,7 +81,7 @@ body {
     }
 }
 
-.modal__title {
+.modal-title {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     height: 60px;
@@ -89,7 +89,7 @@ body {
     background-color: #fff;
 }
 
-.modal__title__text {
+.modal-title__text {
     text-align: center;
     font-size: 22px;
     color: #404143;
@@ -97,20 +97,20 @@ body {
     padding: 20px 0 0;
 }
 
-.modal__close {
+.modal-title__close {
     size: 14.5px;
     stroke: #757e87;
     position: absolute 9px 15px * *;
 }
 
-.modal__links {
+.modal-links {
     background-color: #f0f5fa;
     padding: 20px 0 30px;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
 }
 
-.modal__text {
+.modal-links__text {
     text-align: center;
     background-color: #37b7ec;
     color: #fff;
@@ -119,14 +119,14 @@ body {
     font-size: 20px;
 }
 
-.modal__socials__block {
+.modal-socials {
     display: flex;
     justify-content: space-around;
     width: 75%;
     margin: 40px auto 0;
 }
 
-.modal__social__block {
+.modal-socials-block {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,7 +146,7 @@ body {
     }
 }
 
-.modal__social__svg {
+.modal-socials-block__svg {
     fill: #fff;
     &.soc-fb {
         width: 9px;
@@ -165,13 +165,13 @@ body {
     }
 }
 
-.logo__svg {
+.offer-logo__svg {
     width: 34px;
     height: 33px;
     margin: 0 5px 0 0;
 }
 
-.logo__text {
+.offer-logo-text {
     display: inline-block;
     color: #fff;
     vertical-align: top;
@@ -179,18 +179,18 @@ body {
     font-family: 'HelveticaNeueUltraThin', sans-serif, Arial;
 }
 
-.logo__name {
+.offer-logo-text__name {
     font-size: 14px;
     font-weight: 500;
     margin: 0 0 3px;
 }
 
-.logo__description {
+.offer-logo-text__description {
     margin: 0;
     font-size: 12px;
 }
 
-.download__btn {
+.offer-download__btn {
     background-color: #fff;
     border: none;
     border-radius: 3px;
@@ -203,7 +203,7 @@ body {
     font-family: 'HelveticaNeueLight', sans-serif, Arial;
 }
 
-.offer__close {
+.offer-download__close {
     size: 16px;
     stroke: #fff;
     vertical-align: middle;
@@ -777,13 +777,13 @@ input[type=checkbox] {
 }
 
 @media (min-width:768px) and (max-width:1199px) {
-    .modal__content {
+    .modal-content {
         width: 37%;
     }
-    .offer__wrap {
+    .offer-wrap {
         display: block;
     }
-    .offer__section {
+    .offer {
         width: 89%;
     }
     .header {
@@ -830,24 +830,24 @@ input[type=checkbox] {
 }
 
 @media (min-width:320px) and (max-width:767px) {
-    .modal__content {
-        width: 90%;
+    .modal-content {
+        width: 60%;
     }
-    .offer__wrap {
+    .offer-wrap {
         display: block;
     }
-    .offer__section {
+    .offer {
         width: 95%;
     }
-    .logo__svg {
+    .offer-logo__svg {
         size: 32px;
         border-radius: 50%;
     }
-    .download__btn {
+    .offer-download__btn {
         width: 90px;
         margin: 0 7px 0 0;
     }
-    .offer__close {
+    .offer-download__close {
         size: 11px;
     }
     .header {
